@@ -47,7 +47,7 @@ class Bola {
      num_objetos.innerHTML = numBola
    }
 
-   desenhar =()=>{
+   desenhar=()=>{
      const div = document.createElement("div")
      div.setAttribute("id",this.id)
      div.setAttribute("class","bola")

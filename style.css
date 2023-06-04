@@ -1,12 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
 *{
   border: none;
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
 }
+
+body{
+  background-color: #000;
+  font-family: 'Inter', sans-serif;
+}
 .controles{
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: stretch;
   width: 100%;
   background-color: #eee;
@@ -17,19 +24,127 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   background-color: #fff;
-  border: 2px solid #888;
+  border: 2px solid #000;
   border-radius: 5px;
   padding: 5px;
   margin: 5px;
 }
-button{
-  cursor: pointer;
-  background-color: #888;
-  color: #fff;
+.controle1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 5px;
   padding: 5px;
+  margin: 5px;
+}
+.btn_remover {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+.btn-6 {
+  background: rgb(77, 77, 77);
+background: radial-gradient(circle, rgb(87, 87, 87) 0%, rgb(0, 0, 0) 100%);
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btn-6 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-6:before,
+.btn-6:after {
+  position: absolute;
+  content: "";
+  height: 0%;
+  width: 1px;
+ box-shadow:
+ 7px 7px 20px 0px rgba(0,0,0,.4),
+ 7px 7px 20px 0px rgba(0,0,0,.4),
+   7px 7px 20px 0px rgba(0,0,0,.4),
+   4px 4px 5px 0px rgba(0,0,0,.3);
+}
+.btn-6:before {
+  right: 0;
+  top: 0;
+  transition: all 500ms ease;
+}
+.btn-6:after {
+  left: 0;
+  bottom: 0;
+  transition: all 500ms ease;
+}
+.btn-6:hover{
+  background: transparent;
+  color: #000;
+  box-shadow: #000;
+}
+.btn-6:hover:before {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.btn-6:hover:after {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.btn-6 span:before,
+.btn-6 span:after {
+  position: absolute;
+  content: "";
+  box-shadow:
+  7px 7px 20px 0px rgba(0,0,0,.4),
+  7px 7px 20px 0px rgba(0,0,0,.4),
+   7px 7px 20px 0px rgba(0,0,0,.4),
+   4px 4px 5px 0px rgba(0,0,0,.3);
+}
+.btn-6 span:before {
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: .5px;
+  transition: all 500ms ease;
+}
+.btn-6 span:after {
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: .5px;
+  transition: all 500ms ease;
+}
+.btn-6 span:hover:before {
+  width: 100%;
+}
+.btn-6 span:hover:after {
+  width: 100%;
+}
+.btn_add{
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  padding: 7px;
   border-radius: 5px;
 }
 input[type='number'], #num_objetos{
@@ -45,8 +160,8 @@ input[type='number'], #num_objetos{
   min-height: 100vh;
   min-height: fill-available;
   min-height: -webkit-fill-available;
-  background-color: #eee;
-  border: 2px solid #000;
+  background-color: #000;
+  border: 2px solid #fff;
   border-radius: 5px;
   position: absolute;
   overflow: hidden;
